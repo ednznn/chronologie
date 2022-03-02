@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Georgia, serif;
+}
+
+body {
+  background-image: url('https://www.photos-public-domain.com/wp-content/uploads/2011/03/black-parchment-paper-texture.jpg');
+  font-family: Georgia, serif;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #E88A0E;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.right::after {
+  left: -16px;
+}
+
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 600px) {
+  .timeline::after {
+  left: 31px;
+  }
+  
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  .right {
+  left: 0%;
+  }
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.pinimg.com/originals/c0/81/43/c08143fbfd7263b4c42615a809a21393.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-image h1 {
+  margin: 0;
+}
+
+.hero-image h3 {
+  margin-bottom: 12.5%;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text button {
+  border: 2px solid white;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color:white;
+  text-align: center;
+  cursor: pointer;
+  font-family: Georgia;
+  transition: 0.3s;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+.hero-text button:hover {
+  border: 2px solid white;
+  background-color:transparent;
+  color: white;
+  font-family: Georgia;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+
+    if (this.hash !== "") {
+      event.preventDefault();
+
+      var hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
+</script>
+</head>
+<body>
+<div class="hero-image" style="color:white;">
+  <div class="hero-text">
+    <center>
+      <h1 style="font-size:64pt; text-shadow:2px 2px #E88A0E;">La Renaissance</h1>
+      <h3>Un peu d&#39;histoire par Edan et Daniel</h3>
+      <a href="#chronologie">
+        <button>C O M M E N C E R</button>
+      </a>
+    </center>
+  </div>
+</div>
+<a id="chronologie"><center><u style="text-decoration-color:#E88A0E; text-decoration-thickness: 10px;"><h1 style="font-size:36pt; color:white;">L&#39;introduction</h1></u></a><h4 style="font-size:18pt; color:white; text-align: center; width:720px">La renaissance a &eacute;t&eacute; une p&eacute;riode o&ugrave; il y a eu une nouvelle naissance de l'influence grecque et romaine sur l'art et la culture. Il y avait une explosion d'inventions et de nouveaux b&acirc;timents aussi.</h4>
+  <u style="text-decoration-color:#E88A0E; text-decoration-thickness: 10px;"><h1 style="font-size:64pt; color:white;">La Chronologie</h1></u></center></a>
+<div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <u style="text-decoration-color:#E88A0E; text-decoration-thickness: 2px;"><h1 style="text-align: center;">1440</h1></u>
+      <img src="https://d1mkprg9bp64fp.cloudfront.net/wp-content/blogs.dir/2/files/2012/10/Gutenberg-Reproduction.png" align="left" width="20%" style="padding:10px">
+      <h3><em>L&#39;invention de l&#39;imprimerie par Gutenburg</em></h3>
+      <p>Parce que &ccedil;a faisait beaucoup des livres, plus de gens savaient lire, surtout la Bible.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <u style="text-decoration-color:#E88A0E; text-decoration-thickness: 2px;"><h1 style="text-align: center;">Vers 1450</h1></u>
+      <img src="https://img1.picmix.com/output/stamp/normal/9/1/6/3/523619_0ae7b.png" align="left" width="20%" style="padding:10px">
+      <h3><em>Invention de la boussole</em></h3>
+      <p>Il a aid&eacute; Christopher Columbus et autre colonisateurs &agrave; naviguer.</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <u style="text-decoration-color:#E88A0E; text-decoration-thickness: 2px;"><h1 style="text-align: center;">1453</h1></u>
+      <img src="https://www.worldhistory.org/img/r/p/500x600/11955.png?v=1640704502" align="left" width="20%" style="padding:10px">
+      <h3><em>Fin de la Guerre de Cent Ans</em></h3>
+      <p>France a gagn&eacute; la guerre et pris la Normandie et l&#39;Aquitaine &agrave; l&#39;Angleterre.
+      </p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <u style="text-decoration-color:#E88A0E; text-decoration-thickness: 2px;"><h1 style="text-align: center;">1492</h1></u>
+      <img src="https://www.columbustoken.net/images1/christoper-columbus.png" align="left" width="25%" style="padding:10px">
+      <h3><em>Christophe Colomb arrive aux Antilles</em></h3>
+      <p>Il voulait aller en Inde prendre des &eacute;pices et de l&#39;or, mais il arrive aux Antilles. Il a colonis&eacute; les "West Indies" et g&eacute;nocid&eacute; les indig&egrave;nes.</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <u style="text-decoration-color:#E88A0E; text-decoration-thickness: 2px;"><h1 style="text-align: center;">1515</h1></u>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/French_School_Portrait_of_Francis_I_of_France_c._1530.jpg" align="left" width="20%" style="padding:10px; border-radius:20px;">
+      <h3><em>Fran&ccedil;ois I<sup>er</sup> &#40;1494&ndash;1547&#41; devient roi</em></h3>
+      <p>&ldquo;Il a vingt ans, il est beau, plein d&#39;energie et d&#39;enthousiasme,&rdquo;, d&#39;apr&egrave;s le livre. Il &agrave; aide &agrave; commencer la Renaissance.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <u style="text-decoration-color:#E88A0E; text-decoration-thickness: 2px;"><h1 style="text-align: center;">1517</h1></u>
+      <img src="https://liberalartsclubband.sites.grinnell.edu/wp-content/uploads/2017/11/martin-luther.png" align="left" width="20%" style="padding:10px; border-radius:20px;">
+      <h3><em>La R&eacute;forme</em></h3>
+      <p>Martin Luther a commenc&eacute; un mouvement contre l&#39;&Eacute;glise Catholique appel&eacute; &ldquo;r&eacute;forme protestante.&rdquo; Il a form&eacute; le Luth&eacute;ranisme.
+      </p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <u style="text-decoration-color:#E88A0E; text-decoration-thickness: 2px;"><h1 style="text-align: center;">1539</h1></u>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Villers-Cot.jpg/615px-Villers-Cot.jpg" align="left" width="40%" style="padding:10px; border-radius:20px;">
+      <h3><em>&Eacute;dit de Villers-Cotter&ecirc;ts&#58; Le fran&ccedil;ais devient la langue officielle de la France</em></h3>
+      <p>Maintenant, la plupart des gens parlent fran&ccedil;ais, et les actes officiels seront &eacute;crits en fran&ccedil;ais.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <u style="text-decoration-color:#E88A0E; text-decoration-thickness: 2px;"><h1 style="text-align: center;">1572</h1></u>
+      <img src="http://archive.spurgeon.org/images/stbarts.gif" align="left" width="50%" style="padding:10px; border-radius:20px;">
+      <h3><em>Massacre de la Saint-Barth&eacute;lemy</em></h3>
+      <p>De nombreux huguenots, ou protestants, sont morts dans les guerres civiles.</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <u style="text-decoration-color:#E88A0E; text-decoration-thickness: 2px;"><h1 style="text-align: center;">1589</h1></u>
+      <img src="https://i.f1g.fr/media/eidos/630x354_crop/2021/08/20/XVM24bb603e-f9ef-11eb-a2b2-02c325f67cf7.jpg" align="left" width="40%" style="padding:10px; border-radius:20px;">
+      <h3><em>Henri IV &#40;1553&ndash;1610&#41; devient roi</em></h3>
+      <p>Henri IV est protestant, comme beaucoup de gens en France.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <u style="text-decoration-color:#E88A0E; text-decoration-thickness: 2px;"><h1 style="text-align: center;">1598</h1></u>
+      <img src="https://museeprotestant.org/wp-content/uploads/2013/12/0000000667L.jpg" align="left" width="50%" style="padding:10px; border-radius:20px;">
+      <h3><em>&Eacute;dit de Nantes</em></h3>
+      <p>Fait par Henri IV, l&#39;&eacute;dit a donn&eacute; beaucoup de gens la libert&eacute; religieuse.</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <u style="text-decoration-color:#E88A0E; text-decoration-thickness: 2px;"><h1 style="text-align: center;">1610</h1></u>
+      <img src="https://www.akg-images.com/Docs/AKG/Media/TR3_WATERMARKED/9/d/b/5/AKG5822658.jpg" align="left" width="25%" style="padding:10px; border-radius:20px;">
+      <h3><em>Mort d&#39;Henri IV</em></h3>
+      <p>Henri IV est assassin&eacute; par Ravaillac.</p>
+    </div>
+  </div>
+</div>
+<center><h1 style="color:white;">Fin!</h1></center>
+<div style="height: 25px;"</div>
+
+</body>
+</html>
+
